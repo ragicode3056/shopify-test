@@ -1,0 +1,84 @@
+
+
+<style>
+  
+  .carrousel-test button {
+    display: block; 
+  }
+  
+  
+</style>
+
+<div class="wide-container half-gutter section-spacing" data-section-type="carrousel-list" data-cc-animate>
+
+   {% if section.settings.title != blank %}
+    <div class="section-heading" data-cc-animate>
+      {% if section.settings.title != blank %}
+        <h2 class="h2">{{ section.settings.title | escape }}</h2>
+      {% else %}
+        <div></div>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+    <div class="swiper-container product-list product-list--carrousel">
+
+  <div class="carrousel-test" style="margin-top: 15px;">
+		
+        {% for block in section.blocks %}
+            <div style="margin-left:40px; margin-right: 40px; display:flex; flex-direction: column; align-items: center;">
+                <a href="{{ block.settings.url }}">  <img src="{{ block.settings.image | img_url: '512x512' }}" width="80" height="80" /></a>
+              <span style="font-size: 13px; font-weight: 700; min-width: 120px;">{{ block.settings.label }}</span>
+          </div>
+        {% endfor %}
+      </div>	
+  </div>
+      
+</div>
+
+
+{% schema %}
+  {
+    "name": "Carrousel",
+    "class": "section-collection-list",
+    "max_blocks": 100,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Services"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "carrousel-item",
+        "name": "Carrousel item",
+        "settings": [
+          {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+          },
+          {
+              "type": "text",
+              "id": "label",
+              "label": "Label"
+          },
+          {
+            "type":"url",
+            "id":"url",
+            "label":"Link"
+          }
+        ]
+      }
+    ],
+"presets": [
+      {
+        "name": "Carrousel",
+        "category": "Show information"
+      }
+    ]
+  }
+{% endschema %}
+
