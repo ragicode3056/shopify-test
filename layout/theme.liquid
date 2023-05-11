@@ -409,14 +409,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </script>
 
     <script>
-var cartValue = {{ cart.total_price | divided_by: 100.00 }};
-console.log('Cart Value:', cartValue);
-// Use the cartValue as needed
+// var cartValue = {{ cart.total_price | divided_by: 100.00 }};
+// console.log('Cart Value:', cartValue);
+// // Use the cartValue as needed
 
-      if(cartValue >= 10 ){
-        alert("cart value more than 10");
-      }
+//       if(cartValue >= 10 ){
+//         alert("cart value more than 10");
+//       }
 
+// Function to update the cart value
+function updateCartValue() {
+  var cartValue = {{ cart.total_price | divided_by: 100.00 }};
+  console.log('Cart Value:', cartValue);
+  // Use the cartValue as needed
+  if(cartValue > 10 ) {
+    alert("cart more than 10 ")
+  }
+}
+
+// Call the updateCartValue function initially
+updateCartValue();
+
+// Listen for the cart.updated event and call updateCartValue function
+document.addEventListener('cart.updated', function(event) {
+  updateCartValue();
+});
 
     </script>
 
