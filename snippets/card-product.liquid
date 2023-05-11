@@ -218,7 +218,7 @@
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   data-product-url="{{ card_product.url }}"
-                  onclick="submitCalled()"
+                  onclick="submitCalled1()"
                 >
                   {{ 'products.product.choose_options' | t }}
                   {%- if horizontal_quick_add -%}
@@ -383,7 +383,7 @@
 {%- endif -%}
 
 <script>
-  const submitCalled= () =>{
+  const submitCalled1= () =>{
     console.log("submitCalled");
   }
 </script>
