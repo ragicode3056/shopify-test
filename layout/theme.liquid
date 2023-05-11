@@ -409,17 +409,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </script>
 
     <script>
-// Function to get the cart value
-function getCartValue() {
-  Shopify.getCart(function(cart) {
-    var cartValue = cart.total_price;
-    console.log('Cart Value:', cartValue);
-    // Use the cartValue as needed
-  });
-}
+var cartValue = {{ cart.total_price | money_without_currency }};
+console.log('Cart Value:', cartValue);
+// Use the cartValue as needed
 
-// Call the function to get the cart value
-getCartValue();
 
     </script>
 
