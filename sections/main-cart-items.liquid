@@ -43,6 +43,11 @@
     {%- endif -%}
   </div>
 <h1>Test cart</h1>
+  <!--  Spice Product Addons Snippet(cart page) Starts -->
+<div id="spiceaddonsappid">
+{% assign pcollections = '' | split: '' %}{% for item in cart.items %}{% assign product_collections = item.product.collections | map: "id" %}{% if product_collections %}{% assign pcollections= pcollections | concat: product_collections%}{% endif%}{% endfor %}<input type="hidden" id="sgcollectionscart" value="{{ pcollections | uniq | join: "," }}"/>
+</div>
+<!--  Spice Product Addons Snippet(cart page) ends -->
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
     <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
       <div class="js-contents">
