@@ -391,4 +391,51 @@
 function submitCalled() {
   console.log("hello");
 }
+
+var cartValue = {{ cart.total_price | divided_by: 100.00 }};
+console.log('Cart Value:', cartValue);
+// Use the cartValue as needed
+
+      // if(cartValue >= 10 ){
+      //   alert("cart value more than 10");
+      // }
+
+// Function to show the popup
+function showPopup() {
+  // Create a modal element
+  var modal = document.createElement('div');
+  modal.className = 'popup-modal';
+
+  // Create popup content
+  var content = document.createElement('div');
+  content.className = 'popup-content';
+  content.innerHTML = 'Cart value is greater than 10. Choose an option:';
+
+  // Create buttons
+  var button1 = document.createElement('button');
+  button1.textContent = 'Option 1';
+  button1.className = 'popup-button';
+
+  var button2 = document.createElement('button');
+  button2.textContent = 'Option 2';
+  button2.className = 'popup-button';
+
+  // Append buttons to the content
+  content.appendChild(button1);
+  content.appendChild(button2);
+
+  // Append content to the modal
+  modal.appendChild(content);
+
+  // Append modal to the body
+  document.body.appendChild(modal);
+}
+
+// Call the showPopup function if cartValue is greater than 10
+if (cartValue > 10) {
+  console.log("value greater");
+  showPopup();
+}
+
+   
 </script>
