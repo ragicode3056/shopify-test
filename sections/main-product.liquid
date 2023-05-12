@@ -571,12 +571,10 @@
   </script>
 
   <script>
-   document.getElementsByClassName("product-form__submit").addEventListener("click", function() {
-  console.log("clicked inside");
-    // showPopup();
-      var cartValue = {{ cart.total_price | divided_by: 100.00 }};
+  var cartValue = {{ cart.total_price | money_without_currency }};
 console.log('Cart Value:', cartValue);
-});
+// Use the cartValue as needed
+
   </script>
 </section>
 
