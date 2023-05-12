@@ -457,8 +457,10 @@
 </script>
 
 <script>
-  var subtotalElement = document.querySelector(".totals__subtotal-value");
-var subtotalValue = subtotalElement.textContent.trim();
+var subtotalElement = document.querySelector(".totals__subtotal-value");
+var subtotalText = subtotalElement.textContent.trim();
+var subtotalValue = subtotalText.replace(/[^\d.,]/g, "");
 console.log("Subtotal Value:", subtotalValue);
+
 
 </script>
