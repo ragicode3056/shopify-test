@@ -462,5 +462,9 @@ var subtotalText = subtotalElement.textContent.trim();
 var subtotalValue = subtotalText.replace(/[^\d.,]/g, "");
 console.log("Subtotal Value:", subtotalValue);
 
+if(subtotalValue > 100){
+  console.log("subtotal is more")
+}
+
 
 </script>
