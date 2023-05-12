@@ -613,6 +613,17 @@ var quantityContainer = document.getElementById('Quantity-Form-template--1892223
     var cartBox = document.getElementsByClassName('product-form__submit');
     console.log(cartBox,"cartBox")
 
+    var cartBox = document.getElementsByClassName('product-form__submit');
+console.log(cartBox, "cartBox");
+
+// Attach event listener to each cart box element
+Array.from(cartBox).forEach(function(element) {
+  element.addEventListener('click', function() {
+    console.log('Cart box clicked');
+    // Add your logic here for when the cart box is clicked
+  });
+});
+
 quantityContainer.addEventListener('click', function(event) {
   // Check if the click event originated from the quantity input
 if(cartValue > 10){
