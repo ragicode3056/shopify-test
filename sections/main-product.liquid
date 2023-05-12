@@ -621,6 +621,11 @@ Array.from(cartBox).forEach(function(element) {
   element.addEventListener('click', function() {
     console.log('Cart box clicked');
     // Add your logic here for when the cart box is clicked
+
+    if(cartValue > 10){
+  checkCartValue();
+  console.log("cart is more",cartValue);
+}
   });
 });
 
