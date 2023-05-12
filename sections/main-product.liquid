@@ -571,7 +571,7 @@
   </script>
 
   <script>
-    document.getElementsByClassName("product-form__submit").addEventListener("click", function() {
+   document.getElementsByClassName("product-form__submit").addEventListener("click", function() {
   console.log("clicked inside");
     // showPopup();
       var cartValue = {{ cart.total_price | divided_by: 100.00 }};
