@@ -571,8 +571,10 @@
   </script>
 
   <script>
-  var cartValue = {{ cart.total_price | money_without_currency }};
+ var cartValue = {{ cart.total_price | divided_by: 100.00 }};
 console.log('Cart Value:', cartValue);
+// Use the cartValue as needed
+
 // Use the cartValue as needed
 
   </script>
