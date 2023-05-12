@@ -464,6 +464,37 @@ console.log("Subtotal Value:", subtotalValue);
 var subtotalValueFloat = parseFloat(subtotalValue);
 console.log("Subtotal Value (Float):", subtotalValueFloat);
 
+ //popup modal 
+    var modal = document.createElement("div");
+modal.id = "cartBox";
+modal.className = "modal";
+modal.style.display = "none";
+
+var modalContent = document.createElement("div");
+modalContent.className = "modal-content";
+
+var closeBtn = document.createElement("span");
+closeBtn.className = "close";
+closeBtn.innerHTML = "&times;";
+
+var message1 = document.createElement("p");
+message1.textContent = "Cart value is more than 100 avail offers";
+
+var btn1 = document.createElement("button");
+btn1.textContent = "Button 1";
+btn1.addEventListener("click", function() {
+  // Logic for Button 1 navigation
+  console.log("Button 1 clicked");
+});
+
+var btn2 = document.createElement("button");
+btn2.textContent = "Button 2";
+btn2.addEventListener("click", function() {
+  // Logic for Button 2 navigation
+  console.log("Button 2 clicked");
+});
+
+  
 if(subtotalValueFloat > 40){
   console.log("subtotal is more")
 }
