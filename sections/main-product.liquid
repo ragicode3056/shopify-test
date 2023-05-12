@@ -622,7 +622,7 @@ Array.from(cartBox).forEach(function(element) {
     console.log('Cart box clicked');
     // Add your logic here for when the cart box is clicked
 
-    if(cartValue > 10){
+    if(cartValue > 100){
   checkCartValue();
   console.log("cart is more",cartValue);
 }
@@ -631,7 +631,7 @@ Array.from(cartBox).forEach(function(element) {
 
 quantityContainer.addEventListener('click', function(event) {
   // Check if the click event originated from the quantity input
-if(cartValue > 10){
+if(cartValue > 100){
   checkCartValue();
   console.log("cart is more",cartValue);
 }
@@ -670,7 +670,7 @@ document.body.appendChild(modal);
     // Check if cart value exceeds 30 and display the popup
 function checkCartValue() {
   var cartValue = {{ cart.total_price | divided_by: 100.00 }};
-  if (cartValue > 20) {
+  if (cartValue > 100) {
     var modal = document.getElementById("popupModal");
     modal.style.display = "block";
   }
