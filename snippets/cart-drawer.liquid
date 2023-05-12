@@ -486,11 +486,11 @@ divElement.appendChild(textElement);
 divElement.appendChild(button1);
 divElement.appendChild(button2);
 
-// Find the cart-drawer-items element
-var cartDrawerItems = document.querySelector("cart-drawer-items");
+// Find the element with the class 'drawer__footer'
+var footerElement = document.querySelector('.drawer__footer');
 
-// Insert the div element after the cart-drawer-items element
-cartDrawerItems.insertAdjacentElement("afterend", divElement);
+// Insert the div element before the footer element
+footerElement.insertAdjacentElement('beforebegin', divElement);
 
   
 if(subtotalValueFloat > 40){
