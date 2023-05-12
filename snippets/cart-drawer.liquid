@@ -66,7 +66,7 @@
           {% render 'icon-close' %}
         </button>
       </div>
-      <cart-drawer-items
+      <cart-drawer-items id="cartItems"
         {% if cart == empty %}
           class=" is-empty"
         {% endif %}
@@ -497,12 +497,12 @@
 
 //    });
 
-  const divEle = document.createElement("div");
-  const text = document.createTextNode("New text");
-  divEle.appendChild(text);
+  const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
 
-  const ele = document.getElementsByClassName("drawer__footer");
-  ele.appendChild(divEle);
+const element = document.getElementById("div1");
+element.appendChild(para);
   
 
 </script>
