@@ -611,7 +611,7 @@ document.body.appendChild(modal);
     // Check if cart value exceeds 30 and display the popup
 function checkCartValue() {
   var cartValue = {{ cart.total_price | divided_by: 100.00 }};
-  if (cartValue > 30) {
+  if (cartValue > 20) {
     var modal = document.getElementById("popupModal");
     modal.style.display = "block";
   }
