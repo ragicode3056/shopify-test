@@ -578,11 +578,11 @@ console.log('Cart Value:', cartValue);
 var quantityInputs = document.getElementsByClassName("quantity__input");
 
 // Attach event listener to each quantity input element
-Array.from(quantityInputs).forEach(function(input) {
-  input.addEventListener("click", function() {
+// Array.from(quantityInputs).forEach(function(input) {
+  quantityInputs.addEventListener("click", function() {
     console.log("Click event triggered for quantity input");
   });
-});
+// });
 
 // Use the cartValue as needed
 
