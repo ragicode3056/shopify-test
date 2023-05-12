@@ -610,7 +610,11 @@
 console.log('Cart Value:', cartValue);
 // quantity checks
 var quantityContainer = document.getElementById('Quantity-Form-template--18922238214424__main');
-
+var cartAdd = document.getElementById('ProductSubmitButton-template--18922238214424__main');
+cartAdd.addEventListener('click',function(event){
+  console.log("cart cllikced -------")
+});
+    
 quantityContainer.addEventListener('click', function(event) {
   // Get the input element inside the quantityContainer
   var inputElement = quantityContainer.querySelector('.quantity__input');
