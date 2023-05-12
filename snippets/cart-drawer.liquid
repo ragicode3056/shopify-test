@@ -555,14 +555,30 @@ document.querySelector(".close").addEventListener("click", function() {
 
 //    });
 
-  const para = document.createElement("p");
-const node = document.createTextNode("This is new.");
-para.appendChild(node);
+//   const para = document.createElement("p");
+// const node = document.createTextNode("This is new.");
+// para.appendChild(node);
 
-const element = document.getElementById("cartItems");
-  console.log(element,"element");
-  console.log(para,"para");
-element.appendChild(para);
+// const element = document.getElementById("cartItems");
+//   console.log(element,"element");
+//   console.log(para,"para");
+// element.appendChild(para);
+
+  document.addEventListener('DOMContentLoaded', function() {
+  // Find the drawer cart element
+  var drawerCart = document.getElementById('cartItems');
+
+  // Create the small div element
+  var smallDiv = document.createElement('div');
+  smallDiv.classList.add('small-div');
+
+  // Add content to the small div
+  smallDiv.innerHTML = '<p>Your small div content goes here</p>';
+
+  // Append the small div to the drawer cart
+  drawerCart.appendChild(smallDiv);
+});
+
   
 
 </script>
