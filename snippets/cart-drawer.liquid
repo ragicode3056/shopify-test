@@ -460,7 +460,7 @@
 
    //popup modal 
     var modal = document.createElement("div");
-modal.id = "popupModal";
+modal.id = "popupModal1";
 modal.className = "modal1";
 modal.style.display = "none";
 
@@ -503,14 +503,14 @@ function clickCalled() {
   var cartValue = {{ cart.total_price | divided_by: 100.00 }};
   
  
-    var modal = document.getElementById("popupModal");
+    var modal = document.getElementById("popupModal1");
     modal.style.display = "block";
 
 }
 
 // Close the popup when the close button is clicked
 document.querySelector(".close").addEventListener("click", function() {
-  var modal = document.getElementById("popupModal");
+  var modal = document.getElementById("popupModal1");
   modal.style.display = "none";
 });
 
