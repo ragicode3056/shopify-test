@@ -608,34 +608,23 @@
   <script>
  var cartValue = {{ cart.total_price | divided_by: 100.00 }};
 console.log('Cart Value:', cartValue);
-// Use the cartValue as needed
+// quantity checks
 var quantityContainer = document.getElementById('Quantity-Form-template--18922238214424__main');
-    var cartBox = document.getElementsByClassName('product-form__submit');
-    console.log(cartBox,"cartBox")
-
-    var cartBox = document.getElementsByClassName('product-form__submit');
-console.log(cartBox, "cartBox");
-
-// Attach event listener to each cart box element
-Array.from(cartBox).forEach(function(element) {
-  element.addEventListener('click', function() {
-    console.log('Cart box clicked');
-    // Add your logic here for when the cart box is clicked
-
-    if(cartValue > 100){
-  checkCartValue();
-  console.log("cart is more",cartValue);
-}
-  });
-});
 
 quantityContainer.addEventListener('click', function(event) {
-  // Check if the click event originated from the quantity input
-if(cartValue > 100){
-  checkCartValue();
-  console.log("cart is more",cartValue);
-}
+  // Get the input element inside the quantityContainer
+  var inputElement = quantityContainer.querySelector('.quantity__input');
+  
+  // Get the value of the input
+  var inputValue = parseInt(inputElement.value);
+  
+  // Check if the input value is greater than 2
+  if (inputValue > 2) {
+    checkCartValue();
+    console.log("Cart value is more than 100");
+  }
 });
+
 
     
 
