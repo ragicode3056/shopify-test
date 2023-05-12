@@ -12,7 +12,7 @@
     visibility: hidden;
   }
   .hidden-div{
-/*     display:none; */
+    display:none;
   }
 </style>
 
@@ -479,9 +479,9 @@ console.log("Subtotal Value:", subtotalValue);
 var subtotalValueFloat = parseFloat(subtotalValue);
 console.log("Subtotal Value (Float):", subtotalValueFloat);
 
-     // if(subtotalValueFloat > 100){
-     //   document.getElementById('cart-avail-discount').classList.remove('hidden-div');
-     // }
+     if(subtotalValueFloat > 100){
+       document.getElementById('cart-avail-discount').classList.remove('hidden-div');
+     }
 // if (subtotalValueFloat > 40) {
 //   // Create the div element
 //   var divElement = document.createElement("div");
