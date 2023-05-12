@@ -457,6 +457,7 @@
 </script>
 
 <script>
+   document.addEventListener('DOMContentLoaded', function () {
 var subtotalElement = document.querySelector(".totals__subtotal-value");
 var subtotalText = subtotalElement.textContent.trim();
 var subtotalValue = subtotalText.replace(/[^\d.,]/g, "");
@@ -494,6 +495,6 @@ if (subtotalValueFloat > 40) {
   lastElement.insertAdjacentElement("beforebegin", divElement);
 }
 
-
+   });
 
 </script>
