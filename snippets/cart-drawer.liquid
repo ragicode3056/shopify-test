@@ -465,10 +465,8 @@ var subtotalValueFloat = parseFloat(subtotalValue);
 console.log("Subtotal Value (Float):", subtotalValueFloat);
 
 if (subtotalValueFloat > 40) {
-  console.log("value more ")
   // Create the div element
   var divElement = document.createElement("div");
-  console.log("divElement ",divElement)
   divElement.style.border = "1px solid black";
   divElement.style.padding = "10px";
 
@@ -489,14 +487,13 @@ if (subtotalValueFloat > 40) {
   divElement.appendChild(button1);
   divElement.appendChild(button2);
 
-  // Find the element with the class 'drawer__footer'
-  var footerElement = document.querySelector('.drawer__footer');
-  console.log(footerElement,"footerElement")
+  // Find the last element in the cart drawer
+  var lastElement = document.querySelector("cart-drawer-items").lastElementChild;
 
-  // Insert the div element before the footer element
-  // divElement.insertBefore(footerElement, null);
-  document.body.append(divElement);
+  // Insert the div element before the last element
+  lastElement.insertAdjacentElement("beforebegin", divElement);
 }
+
 
 
 </script>
