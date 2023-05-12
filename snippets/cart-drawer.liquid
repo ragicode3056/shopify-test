@@ -474,7 +474,7 @@ var modalContent = document.createElement("div");
 modalContent.className = "modal-content";
 
 var closeBtn = document.createElement("span");
-closeBtn.className = "close";
+closeBtn.className = "close1";
 closeBtn.innerHTML = "&times;";
 
 var message1 = document.createElement("p");
@@ -514,7 +514,7 @@ function checkCartValue() {
 }
 
 // Close the popup when the close button is clicked
-document.querySelector(".close").addEventListener("click", function() {
+document.querySelector(".close1").addEventListener("click", function() {
   var modal = document.getElementById("popupModal");
   modal.style.display = "none";
 });
