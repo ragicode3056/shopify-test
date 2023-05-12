@@ -583,10 +583,49 @@ if(cartValue > 10){
 }
 });
 
+    //modal creation 
+    // Create the popup modal dynamically
+var modal = document.createElement("div");
+modal.id = "popupModal";
+modal.className = "modal";
+modal.style.display = "none";
 
+var modalContent = document.createElement("div");
+modalContent.className = "modal-content";
 
+var closeBtn = document.createElement("span");
+closeBtn.className = "close";
+closeBtn.innerHTML = "&times;";
 
-// Use the cartValue as needed
+var message = document.createElement("p");
+message.textContent = "Cart value exceeds 30!";
+
+// Append the elements to build the modal structure
+modalContent.appendChild(closeBtn);
+modalContent.appendChild(message);
+modal.appendChild(modalContent);
+
+// Append the modal to the document body
+document.body.appendChild(modal);
+
+    // Check if cart value exceeds 30 and display the popup
+function checkCartValue() {
+  var cartValue = {{ cart.total_price | divided_by: 100.00 }};
+  if (cartValue > 30) {
+    var modal = document.getElementById("popupModal");
+    modal.style.display = "block";
+  }
+}
+
+// Close the popup when the close button is clicked
+document.querySelector(".close").addEventListener("click", function() {
+  var modal = document.getElementById("popupModal");
+  modal.style.display = "none";
+});
+
+// Call the checkCartValue function
+checkCartValue();
+
 
   </script>
 </section>
