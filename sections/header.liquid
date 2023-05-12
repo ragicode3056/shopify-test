@@ -413,7 +413,8 @@
          {% if section.settings.secondary_menu != blank %}
       {%
         render 'navlist',
-        menu_list: linklists[section.settings.secondary_menu].links,
+   menu: section.settings.secondary_menu,
+       
         depth: 1,
         max_depth: 1,
         aria_expanded: true,
