@@ -610,8 +610,18 @@
 console.log('Cart Value:', cartValue);
 // Use the cartValue as needed
 var quantityContainer = document.getElementById('Quantity-Form-template--18922238214424__main');
+    var cartBox = document.getElementsByClassName('product-form__submit');
+    console.log(cartBox,"cartBox")
 
 quantityContainer.addEventListener('click', function(event) {
+  // Check if the click event originated from the quantity input
+if(cartValue > 10){
+  checkCartValue();
+  console.log("cart is more",cartValue);
+}
+});
+
+    quantityContainer.addEventListener('click', function(event) {
   // Check if the click event originated from the quantity input
 if(cartValue > 10){
   checkCartValue();
