@@ -577,12 +577,13 @@ console.log('Cart Value:', cartValue);
 // Get all elements with the class "quantity__input"
 var quantityInputs = document.getElementsByClassName("quantity__input");
 
-// Attach event listener to each quantity input element
-// Array.from(quantityInputs).forEach(function(input) {
-  quantityInputs.addEventListener("click", function() {
+// Loop through each quantity input element and attach event listener
+for (var i = 0; i < quantityInputs.length; i++) {
+  quantityInputs[i].addEventListener("click", function() {
     console.log("Click event triggered for quantity input");
   });
-// });
+}
+
 
 // Use the cartValue as needed
 
