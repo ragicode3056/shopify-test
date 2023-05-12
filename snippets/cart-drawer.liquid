@@ -493,10 +493,36 @@ btn2.addEventListener("click", function() {
   // Logic for Button 2 navigation
   console.log("Button 2 clicked");
 });
+// Append the elements to build the modal structure
+modalContent.appendChild(closeBtn);
+modalContent.appendChild(message1);
+modalContent.appendChild(btn1);
+modalContent.appendChild(btn2);
+modal.appendChild(modalContent);
+
+// Append the modal to the document body
+document.body.appendChild(modal);
+
+// Check if cart value exceeds 30 and display the popup
+function checkCartValue() {
+  var cartValue = {{ cart.total_price | divided_by: 100.00 }};
+  
+ 
+    var modal = document.getElementById("cartBox");
+    modal.style.display = "block";
+
+}
+
+// Close the popup when the close button is clicked
+document.querySelector(".close").addEventListener("click", function() {
+  var modal = document.getElementById("popupModal");
+  modal.style.display = "none";
+});
 
   
 if(subtotalValueFloat > 40){
-  console.log("subtotal is more")
+  console.log("subtotal is more");
+  checkCartValue();
 }
 
 
