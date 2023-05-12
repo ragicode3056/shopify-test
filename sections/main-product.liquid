@@ -669,10 +669,10 @@ document.body.appendChild(modal);
 function checkCartValue() {
   var cartValue = {{ cart.total_price | divided_by: 100.00 }};
   
-  if (cartValue > 30) {
+ 
     var modal = document.getElementById("popupModal");
     modal.style.display = "block";
-  }
+
 }
 
 // Close the popup when the close button is clicked
