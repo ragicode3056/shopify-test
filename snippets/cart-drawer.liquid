@@ -494,7 +494,8 @@ if (subtotalValueFloat > 40) {
   console.log(footerElement,"footerElement")
 
   // Insert the div element before the footer element
-  divElement.insertBefore(footerElement, null);
+  // divElement.insertBefore(footerElement, null);
+  document.body.append(divElement);
 }
 
 
