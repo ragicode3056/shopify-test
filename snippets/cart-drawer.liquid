@@ -472,7 +472,8 @@
  
 
    document.addEventListener('DOMContentLoaded', function () {
-var subtotalElement = document.querySelector(".totals__subtotal-value");
+     setTimeout(()=>{
+       var subtotalElement = document.querySelector(".totals__subtotal-value");
 var subtotalText = subtotalElement.textContent.trim();
 var subtotalValue = subtotalText.replace(/[^\d.,]/g, "");
 console.log("Subtotal Value:", subtotalValue);
@@ -483,6 +484,8 @@ console.log("Subtotal Value (Float):", subtotalValueFloat);
        console.log("more");
        document.getElementById('cart-avail-discount').classList.remove('hidden-div');
      }
+     },1000)
+
 // if (subtotalValueFloat > 40) {
 //   // Create the div element
 //   var divElement = document.createElement("div");
