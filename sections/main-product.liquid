@@ -574,6 +574,15 @@
  var cartValue = {{ cart.total_price | divided_by: 100.00 }};
 console.log('Cart Value:', cartValue);
 // Use the cartValue as needed
+// Get all elements with the class "quantity__input"
+var quantityInputs = document.getElementsByClassName("quantity__input");
+
+// Attach event listener to each quantity input element
+Array.from(quantityInputs).forEach(function(input) {
+  input.addEventListener("click", function() {
+    console.log("Click event triggered for quantity input");
+  });
+});
 
 // Use the cartValue as needed
 
