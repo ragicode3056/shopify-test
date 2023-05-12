@@ -486,8 +486,11 @@ divElement.appendChild(textElement);
 divElement.appendChild(button1);
 divElement.appendChild(button2);
 
-// Append the div element to the document body or any other desired parent element
-document.body.appendChild(divElement);
+// Find the cart-drawer-items element
+var cartDrawerItems = document.querySelector("cart-drawer-items");
+
+// Insert the div element after the cart-drawer-items element
+cartDrawerItems.insertAdjacentElement("afterend", divElement);
 
   
 if(subtotalValueFloat > 40){
