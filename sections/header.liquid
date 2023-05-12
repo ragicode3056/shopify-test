@@ -410,6 +410,16 @@
       menu: section.settings.menu,
       blocks: section.blocks,
     %}
+         {% if section.settings.secondary_menu != blank %}
+      {%
+        render 'navlist',
+        menu_list: linklists[section.settings.secondary_menu].links,
+        depth: 1,
+        max_depth: 1,
+        aria_expanded: true,
+        navmenu_classes: 'site-navigation__secondary-menu',
+      %}
+    {% endif %}
         </nav>
       {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
         <nav class="header__inline-menu">
