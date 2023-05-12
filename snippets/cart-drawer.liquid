@@ -461,8 +461,10 @@ var subtotalElement = document.querySelector(".totals__subtotal-value");
 var subtotalText = subtotalElement.textContent.trim();
 var subtotalValue = subtotalText.replace(/[^\d.,]/g, "");
 console.log("Subtotal Value:", subtotalValue);
+var subtotalValueFloat = parseFloat(subtotalValue);
+console.log("Subtotal Value (Float):", subtotalValueFloat);
 
-if(subtotalValue > 100,00){
+if(subtotalValueFloat > 100){
   console.log("subtotal is more")
 }
 
