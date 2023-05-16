@@ -32,7 +32,7 @@ class CartItems extends HTMLElement {
         return;
       }
       this.onCartUpdate();
-      this.cartPopUpDisplay();
+      // this.cartPopUpDisplay();
     });
   }
 
@@ -53,16 +53,16 @@ class CartItems extends HTMLElement {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const sourceQty = html.querySelector('cart-items');
         this.innerHTML = sourceQty.innerHTML;
-        console.log(sourceQty,"sourceQty")
       })
       .catch(e => {
         console.error(e);
       });
-    console.log("cartupdate");
+    console.log("cartupdate");();
+    this.cartPopUpDisplay();
   }
 
   cartPopUpDisplay(){
-     
+     console.log("cartPopUpDisplay")
        var subtotalElement = document.querySelector(".totals__subtotal-value");
 var subtotalText = subtotalElement.textContent.trim();
 var subtotalValue = subtotalText.replace(/[^\d.,]/g, "");
