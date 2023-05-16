@@ -32,6 +32,7 @@ class CartItems extends HTMLElement {
         return;
       }
       this.onCartUpdate();
+      this.cartPopUpDisplay();
     });
   }
 
@@ -59,6 +60,25 @@ class CartItems extends HTMLElement {
       });
     console.log("cartupdate");
   }
+
+  cartPopUpDisplay(){
+     
+       var subtotalElement = document.querySelector(".totals__subtotal-value");
+var subtotalText = subtotalElement.textContent.trim();
+var subtotalValue = subtotalText.replace(/[^\d.,]/g, "");
+console.log("Subtotal Value:", subtotalValue);
+var subtotalValueFloat = parseFloat(subtotalValue);
+console.log("Subtotal Value (Float):", subtotalValueFloat);
+
+     if(subtotalValueFloat > 100){
+       console.log("more");
+       let s = document.getElementById('cart-avail-discount');
+       console.log(s);
+       document.getElementById('cart-avail-discount').classList.remove('hidden-div');
+     }
+     // },1000)
+  }
+ 
 
   getSectionsToRender() {
     return [
