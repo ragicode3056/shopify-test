@@ -56,6 +56,7 @@ class CartItems extends HTMLElement {
       .catch(e => {
         console.error(e);
       });
+    console.log("cartupdate");
   }
 
   getSectionsToRender() {
