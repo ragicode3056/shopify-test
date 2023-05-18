@@ -356,7 +356,15 @@
         <div class="hidden-div" id="cart-avail-discount">
          car value id there
         </div>
-
+<!--Easy Donation Code -->
+      {%if template != 'cart'%}
+            <div class='donation' id='' page='cart'>
+                  <div class='donation_loader'>
+                        <img width='130' height='130'   src='https://zestardshop.com/shopifyapp/easy_donation/public/image/loader_new.svg'/>
+                   </div>
+           </div>
+      {% endif %}   
+<!--Easy Donation Code -->
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
