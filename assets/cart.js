@@ -232,3 +232,5 @@ if (!customElements.get('cart-note')) {
       }
   });
 };
+
+jQuery.getScript("https://zestardshop.com/shopifyapp/easy_donation/public/js/donation.js");
