@@ -25,11 +25,6 @@
           "settings": {
           }
         },
-        "37a16410-5942-4bf2-91ca-6a5c2d7497f4": {
-          "type": "shopify:\/\/apps\/easy-product-addons\/blocks\/spice_addons\/0099190e-a0cb-49e7-8d26-026c9d26f337",
-          "settings": {
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -65,7 +60,6 @@
         "title",
         "rating",
         "price",
-        "37a16410-5942-4bf2-91ca-6a5c2d7497f4",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
