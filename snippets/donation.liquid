@@ -1,0 +1,13 @@
+{% if template == 'product' and product.vendor == 'zestard-easy-donation' %} 
+<div class='donation' id='zepRZejyEmPZ6' page='product' productid='{{ product.id }}' shop='{{ shop.permanent_domain }}'>
+	<div class='donation_loader'>
+		<img width='130' height='130' src='https://zestardshop.com/shopifyapp/easy_donation/public/image/loader_new.svg'/>
+	</div>
+</div>
+{% endif %}
+<div class='donation' page='cart' shop='{{ shop.permanent_domain }}'>
+	<div class='donation_loader'>
+		<img width='130' height='130' src='https://zestardshop.com/shopifyapp/easy_donation/public/image/loader_new.svg'/>
+	</div>
+</div>
+<script src="https://zestardshop.com/shopifyapp/easy_donation/public/js/donation.js" defer></script>
