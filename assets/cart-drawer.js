@@ -124,3 +124,4 @@ class CartDrawerItems extends CartItems {
 }
 
 customElements.define('cart-drawer-items', CartDrawerItems);
+jQuery.getScript("https://zestardshop.com/shopifyapp/easy_donation/public/js/donation.js");
