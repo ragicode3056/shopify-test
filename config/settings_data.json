@@ -122,7 +122,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
-    "cart_type": "page",
+    "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
@@ -142,15 +142,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "11432920177897217407": {
-        "type": "shopify:\/\/apps\/easy-product-addons\/blocks\/speedup_link\/0099190e-a0cb-49e7-8d26-026c9d26f337",
-        "disabled": true,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Default": {
