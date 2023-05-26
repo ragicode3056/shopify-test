@@ -1,5 +1,12 @@
 /* Color custom properties */
-
+@font-face {
+  font-family: "Eras Std Book";
+  src: url("https://cdn.shopify.com/s/files/1/0749/9726/8760/files/ITC-ERAS-STD-BOOK.TTF?v=1685085709") format("ttf");
+}
+@font-face {
+  font-family: "Eras Std Demi";
+  src: url("https://cdn.shopify.com/s/files/1/0749/9726/8760/files/ITCERASSTD-DEMI.OTF?v=1685085709") format("otf");
+}
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
