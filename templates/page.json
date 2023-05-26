@@ -1,1 +1,21 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":36,"padding_bottom":28}},"exchange-form":{"type":"exchange-form","settings":{}}},"order":["main","exchange-form"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "exchange-form": {
+      "type": "exchange-form",
+      "disabled": true,
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "exchange-form"
+  ]
+}
