@@ -13,8 +13,8 @@
       "settings": {
       }
     },
-    "73423377-1513-4f75-99dd-6e8e6877d950": {
-      "type": "rich-text",
+    "custom-orders-exchange": {
+      "type": "custom-orders-exchange",
       "settings": {
       }
     }
@@ -22,6 +22,6 @@
   "order": [
     "main",
     "exchange-form",
-    "73423377-1513-4f75-99dd-6e8e6877d950"
+    "custom-orders-exchange"
   ]
 }
