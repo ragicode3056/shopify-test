@@ -1,18 +1,19 @@
 <h1>test </h1>
 
 <script>
-    const ordersUrl = '656fbcbd16fcd2cadc32cce32ea0bd40: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@testapp-5058.myshopify.com/admin/api/2023-04/orders.json';
-   console.log("check",ordersUrl);
+   const ordersUrl = 'https://656fbcbd16fcd2cadc32cce32ea0bd40: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@testapp-5058.myshopify.com/admin/api/2023-04/orders.json';
+console.log("check", ordersUrl);
 
-  $.ajax({
+$.ajax({
   url: ordersUrl,
-   dataType: 'json',
-     success: function(data) {
-    console.log("success",data);
-     }
-    error: function(jqXHR, textStatus, errorThrown) {
-    console.log("error")
+  dataType: 'json',
+  success: function(data) {
+    console.log("success", data);
+  },
+  error: function(jqXHR, textStatus, errorThrown) {
+    console.log("error", textStatus, errorThrown);
   }
-  });
+});
+
 
 </script>
