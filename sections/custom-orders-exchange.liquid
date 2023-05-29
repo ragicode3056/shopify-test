@@ -15,7 +15,7 @@ $.ajax({
     // Loop through each order
     for (var i = 0; i < orders.length; i++) {
       var order = orders[i];
-      let productName = order.line_items[i].name;
+      let productName = order.line_items[0].name;
       let productPrice = order.line_items[i].price;
       let productQuantity = order.line_items[i].quantity;
       let productVendor = order.line_items[i].vendor;
