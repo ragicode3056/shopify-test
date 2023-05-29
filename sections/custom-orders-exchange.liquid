@@ -9,6 +9,51 @@ $.ajax({
   dataType: 'json',
   success: function(data) {
     console.log("success", data);
+     // Assuming response.orders is an array of orders
+    var orders = response.orders;
+    
+    // Loop through each order
+    for (var i = 0; i < orders.length; i++) {
+      var order = orders[i];
+      let productName = order.line_items[i].name;
+      let productPrice = order.line_items[i].price;
+      let productQuantity = order.line_items[i].quantity;
+      let productVendor = order.line_items[i].vendor;
+      let productOrderNumber = order.line_items[i].order_number;
+      let productOrderStatusUrl = order.order_status_url;
+      var orderId = order.id;
+      var customerName = order.customer ? order.customer.first_name + ' ' + order.customer.last_name : '';
+      
+      // Create a card element
+      var card = document.createElement('div');
+      card.classList.add('card');
+      
+      // Create card content
+      var cardContent = document.createElement('div');
+      cardContent.classList.add('card-content');
+      
+      // Create card title
+      var cardTitle = document.createElement('h3');
+      cardTitle.textContent = productName;
+      
+      // Create card details
+      var cardDetails = document.createElement('p');
+      cardDetails.innerHTML = 'Price: ' + productPrice + '<br>' +
+                              'Quantity: ' + productQuantity + '<br>' +
+                              'Vendor: ' + productVendor + '<br>' +
+                              'Order Number: ' + productOrderNumber + '<br>' +
+                              'Order Status URL: ' + productOrderStatusUrl;
+      
+      // Append card title and details to card content
+      cardContent.appendChild(cardTitle);
+      cardContent.appendChild(cardDetails);
+      
+      // Append card content to card
+      card.appendChild(cardContent);
+      
+      // Append card to the document body or any other desired element
+      document.body.appendChild(card);
+    }
   },
   error: function(jqXHR, textStatus, errorThrown) {
     console.log("error", textStatus, errorThrown);
