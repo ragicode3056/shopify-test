@@ -11,7 +11,7 @@ $.ajax({
     console.log("success", data);
      // Assuming response.orders is an array of orders
     var orders = data.orders;
-    
+    console.log("orders",orders);
     // Loop through each order
     for (var i = 0; i < orders.length; i++) {
       var order = orders[i];
