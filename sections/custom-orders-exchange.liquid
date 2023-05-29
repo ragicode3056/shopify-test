@@ -10,7 +10,7 @@ $.ajax({
   success: function(data) {
     console.log("success", data);
      // Assuming response.orders is an array of orders
-    var orders = response.orders;
+    var orders = data.orders;
     
     // Loop through each order
     for (var i = 0; i < orders.length; i++) {
