@@ -16,10 +16,10 @@ $.ajax({
     for (var i = 0; i < orders.length; i++) {
       var order = orders[i];
       let productName = order.line_items[0].name;
-      let productPrice = order.line_items[i].price;
-      let productQuantity = order.line_items[i].quantity;
-      let productVendor = order.line_items[i].vendor;
-      let productOrderNumber = order.line_items[i].order_number;
+      let productPrice = order.line_items[0].price;
+      let productQuantity = order.line_items[0].quantity;
+      let productVendor = order.line_items[0].vendor;
+      let productOrderNumber = order.line_items[0].order_number;
       let productOrderStatusUrl = order.order_status_url;
       var orderId = order.id;
       var customerName = order.customer ? order.customer.first_name + ' ' + order.customer.last_name : '';
