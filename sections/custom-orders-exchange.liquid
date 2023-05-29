@@ -74,7 +74,7 @@
         let productQuantity = order.line_items[0].quantity;
         let productVendor = order.line_items[0].vendor;
         let productOrderNumber = order.line_items[0].order_number;
-        let productOrderStatusUrl = order.order_status_url;
+        // let productOrderStatusUrl = order.order_status_url;
         var orderId = order.id;
         var customerName = order.customer ? order.customer.first_name + ' ' + order.customer.last_name : '';
         
@@ -95,8 +95,8 @@
         cardDetails.innerHTML = 'Price: ' + productPrice + '<br>' +
                                 'Quantity: ' + productQuantity + '<br>' +
                                 'Vendor: ' + productVendor + '<br>' +
-                                'Order Number: ' + productOrderNumber + '<br>' +
-                                'Order Status URL: ' + productOrderStatusUrl;
+                                'Order Number: ' + productOrderNumber + '<br>'
+                      
         
         // Append card title and details to card content
         cardContent.appendChild(cardTitle);
