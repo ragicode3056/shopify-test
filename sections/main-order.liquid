@@ -79,6 +79,8 @@ input[type="text"]:focus {
  
 <script>
  <script>
+   let s = document.getElementById('formSubmit');
+  console.log(s,"s");
     document.getElementById('orderForm').addEventListener('submit', function(event) {
       console.log("check")
     event.preventDefault(); // Prevent the form from submitting normally
