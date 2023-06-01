@@ -15,7 +15,6 @@
     },
     "main-account": {
       "type": "main-account",
-      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -23,6 +22,7 @@
     },
     "11070e2d-a526-4d7e-9cfd-bbe368598d5b": {
       "type": "page",
+      "disabled": true,
       "settings": {
         "page": "get-quote",
         "heading_size": "h1",
