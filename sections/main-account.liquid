@@ -12,6 +12,35 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  /* Popup styles */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+  }
+
+  .popup h2 {
+    margin-top: 0;
+  }
+
+  .popup input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  .popup button {
+    padding: 10px 20px;
+  }
 {%- endstyle -%}
 
 <div class="customer account section-{{ section.id }}-padding">
@@ -138,7 +167,13 @@
     </div>
   </div>
 </div>
-
+<div id="exchangePopup" class="popup">
+  <h2>Exchange Order</h2>
+  <p>Order Number: <span id="popupOrderNumber"></span></p>
+  <p>Order Total: <span id="popupOrderTotal"></span></p>
+  <input type="text" placeholder="Why are you returning?" />
+  <button onclick="closePopup()">Continue</button>
+</div>
 {% schema %}
 {
   "name": "t:sections.main-account.name",
@@ -171,10 +206,22 @@
 }
 {% endschema %}
 <script>
-  function exchangeOrder(orderNumber, orderTotal) {
-    // Perform the desired action with the order number and order total
-    console.log('Order Number:', orderNumber);
-    console.log('Order Total:', orderTotal);
-    // Add your code here to handle the exchange process
+ function exchangeOrder(orderNumber, orderTotal) {
+    // Open the popup
+    var popup = document.getElementById('exchangePopup');
+    popup.style.display = 'block';
+    
+    // Set the order number and order total in the popup
+    var orderNumberElement = document.getElementById('popupOrderNumber');
+    orderNumberElement.textContent = orderNumber;
+    
+    var orderTotalElement = document.getElementById('popupOrderTotal');
+    orderTotalElement.textContent = orderTotal;
+  }
+
+  function closePopup() {
+    // Close the popup
+    var popup = document.getElementById('exchangePopup');
+    popup.style.display = 'none';
   }
 </script>
