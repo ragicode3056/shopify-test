@@ -30,14 +30,18 @@
 <div class="test-parent" id="my-div">
   <a href="{{ '/pages/exchange' | shopify_url }}">
 
-  <div class="test-box">
-    Exchange and Returns
-  </div>
-   <div class="test-box" >
-    Return Status
-  </div>
-  </a>
-</div>
+<form action="/process_order.php" method="POST">
+  <label for="order_number">Order Number:</label>
+  <input type="text" id="order_number" name="order_number" required>
+
+  <label for="postal_code">Postal Code:</label>
+  <input type="text" id="postal_code" name="postal_code" required>
+
+  <label for="house_number">House Number (without suffix):</label>
+  <input type="text" id="house_number" name="house_number" required>
+
+  <button type="submit">Continue</button>
+</form>
 
  
 <script>
