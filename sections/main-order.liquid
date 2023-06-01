@@ -81,6 +81,7 @@ input[type="text"]:focus {
  <script>
   $(document).ready(function() {
     $('#orderForm').submit(function(event) {
+      console.log("submit clicked");
       event.preventDefault();
 
       var orderNumber = $('#order_number').val();
