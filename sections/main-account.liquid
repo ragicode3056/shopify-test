@@ -174,6 +174,11 @@
   <input type="text" placeholder="Why are you returning?" />
   <button onclick="closePopup()">Continue</button>
 </div>
+<div id="thanksPopup" class="popup">
+  <h2>Thank you!</h2>
+  <p>Your review has been accepted.</p>
+  <button onclick="closeThanksPopup()">Close</button>
+</div>
 {% schema %}
 {
   "name": "t:sections.main-account.name",
@@ -206,12 +211,12 @@
 }
 {% endschema %}
 <script>
- function exchangeOrder(orderNumber, orderTotal) {
-    // Open the popup
+  function exchangeOrder(orderNumber, orderTotal) {
+    // Open the first popup
     var popup = document.getElementById('exchangePopup');
     popup.style.display = 'block';
     
-    // Set the order number and order total in the popup
+    // Set the order number and order total in the first popup
     var orderNumberElement = document.getElementById('popupOrderNumber');
     orderNumberElement.textContent = orderNumber;
     
@@ -220,8 +225,28 @@
   }
 
   function closePopup() {
-    // Close the popup
+    // Close the first popup
     var popup = document.getElementById('exchangePopup');
     popup.style.display = 'none';
+    
+    // Open the second popup
+    var thanksPopup = document.getElementById('thanksPopup');
+    thanksPopup.style.display = 'block';
+    
+    // Get the entered reason
+    var reasonInput = document.getElementById('reasonInput');
+    var reason = reasonInput.value;
+    
+    // Log the order number, order total, and reason
+    console.log('Order Number:', orderNumberElement.textContent);
+    console.log('Order Total:', orderTotalElement.textContent);
+    console.log('Reason:', reason);
   }
+
+  function closeThanksPopup() {
+    // Close the second popup
+    var thanksPopup = document.getElementById('thanksPopup');
+    thanksPopup.style.display = 'none';
+  }
+  
 </script>
