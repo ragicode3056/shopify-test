@@ -67,8 +67,8 @@
       <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
         {{ order.total_net_amount | money_with_currency }}
       </td>
-      <td headers="RowOrder ColumnExchange" role="cell" data-label="{{ 'customer.orders.exchange' | t }}"> <!-- New column -->
-        <button class="exchange-button">Exchange</button> <!-- New button -->
+      <td headers="RowOrder ColumnExchange" role="cell" data-label="Exchange"> <!-- New column -->
+        <button class="exchange-button" onclick="exchangeOrder('{{ order.name }}', '{{ order.total_net_amount | money_with_currency }}')">Exchange</button> <!-- New button -->
       </td>
     </tr>
     {%- endfor -%}
@@ -170,3 +170,11 @@
   ]
 }
 {% endschema %}
+<script>
+  function exchangeOrder(orderNumber, orderTotal) {
+    // Perform the desired action with the order number and order total
+    console.log('Order Number:', orderNumber);
+    console.log('Order Total:', orderTotal);
+    // Add your code here to handle the exchange process
+  }
+</script>
