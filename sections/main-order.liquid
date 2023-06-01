@@ -88,7 +88,7 @@ input[type="text"]:focus {
       var houseNumber = $('#house_number').val();
 
       $.ajax({
-        url: '/process_order.php',
+        url: 'https://www.kisshosting.be/api_test/process_order.php',
         method: 'POST',
         data: {
           order_number: orderNumber,
