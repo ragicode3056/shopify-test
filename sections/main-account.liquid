@@ -149,6 +149,15 @@
           <span>{{ 'customer.orders.total' | t }}</span>
           <span>{{ order.total_net_amount | money_with_currency }}</span>
         </div>
+         <div class="productName">
+          <span>Product Name</span>
+          <span>{{ order.line_items[0].name }}</span>
+        </div>
+          let productName = order.line_items[0].name;
+        let productPrice = order.line_items[0].price;
+        let productQuantity = order.line_items[0].quantity;
+        let productVendor = order.line_items[0].vendor;
+        let productOrderNumber = order.line_items[0].order_number;
         <div class="order-actions">
           <button onclick="exchangeOrder('{{ order.name }}', '{{ order.total_net_amount }}')">Exchange</button>
         </div>
