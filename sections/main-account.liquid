@@ -211,17 +211,19 @@
 }
 {% endschema %}
 <script>
+ var orderNumberElement; // Declare the variables in a higher scope
+  var orderTotalElement;
+
   function exchangeOrder(orderNumber, orderTotal) {
     // Open the first popup
     var popup = document.getElementById('exchangePopup');
     popup.style.display = 'block';
-    
-    // Set the order number and order total in the first popup
-    var orderNumberElement = document.getElementById('popupOrderNumber');
 
+    // Set the order number and order total in the first popup
+    orderNumberElement = document.getElementById('popupOrderNumber'); // Assign the values to the variables
     orderNumberElement.textContent = orderNumber;
-    
-    var orderTotalElement = document.getElementById('popupOrderTotal');
+
+    orderTotalElement = document.getElementById('popupOrderTotal');
     orderTotalElement.textContent = orderTotal;
   }
 
@@ -229,15 +231,15 @@
     // Close the first popup
     var popup = document.getElementById('exchangePopup');
     popup.style.display = 'none';
-    
+
     // Open the second popup
     var thanksPopup = document.getElementById('thanksPopup');
     thanksPopup.style.display = 'block';
-    
+
     // Get the entered reason
     var reasonInput = document.getElementById('reasonInput');
     var reason = reasonInput.value;
-    
+
     // Log the order number, order total, and reason
     console.log('Order Number:', orderNumberElement.textContent);
     console.log('Order Total:', orderTotalElement.textContent);
