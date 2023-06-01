@@ -79,6 +79,34 @@ input[type="text"]:focus {
  
 <script>
  <script>
+   document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get form data
+    var formData = new FormData(this);
+
+    // Make API call
+    fetch('YOUR_API_ENDPOINT', {
+      method: 'POST',
+      body: formData
+    })
+    .then(function(response) {
+      // Handle the API response
+      if (response.ok) {
+        // API call successful
+        // Redirect to the new page
+        window.location.href = '/yourOrders';
+      } else {
+        // API call failed
+        // Handle the error, display an error message, etc.
+        console.error('API call failed');
+      }
+    })
+    .catch(function(error) {
+      // Handle any error that occurred during the API call
+      console.error('Error:', error);
+    });
+  });
   $(document).ready(function() {
     $('#orderForm').submit(function(event) {
       console.log("submit clicked");
