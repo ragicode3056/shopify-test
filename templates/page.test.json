@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-order",
+      "settings": {
+      }
+    },
+    "51a3bbf1-f2f2-4919-a232-c9d12169e71d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "51a3bbf1-f2f2-4919-a232-c9d12169e71d"
+  ]
+}
