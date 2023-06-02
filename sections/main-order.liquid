@@ -80,9 +80,26 @@ input[type="text"]:focus {
  
 <script>
   function submitForm() {
-    console.log("in fn ");
-     window.location.href = '/pages/orders-exchange';
-     console.log("your orders  ");
+      $.ajax({
+        url: 'https://www.kisshosting.be/api_test/process_order.php',
+        method: 'POST',
+        data: {
+          order_number: orderNumber,
+          postal_code: postalCode,
+          order_date: orderDate
+        },
+        success: function(response) {
+          // Handle the response here
+          console.log(response);
+          // Update the UI with the matching orders
+          var matchingOrders = JSON.parse(response);
+          // Add your logic to display the matching orders on the UI
+        },
+        error: function(xhr, status, error) {
+          // Handle AJAX error here
+          console.log(error);
+        }
+      });
   }
    let s = document.getElementById('formSubmit');
   console.log(s,"s");
