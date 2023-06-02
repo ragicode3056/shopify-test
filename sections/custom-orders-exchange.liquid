@@ -51,7 +51,7 @@
 <div id="container-orders-exchange">
 
 </div>
-<script>
+<!-- <script>
   const ordersUrl = 'https://656fbcbd16fcd2cadc32cce32ea0bd40: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@testapp-5058.myshopify.com/admin/api/2023-04/orders.json';
   console.log("check", ordersUrl);
   const ordersContainer = document.getElementById('container-orders-exchange');
@@ -114,11 +114,11 @@
         card.appendChild(button);
         
         // Add click event listener to the button
-        // button.addEventListener('click', function() {
-        //   // Show "Exchange" or "Return" based on your logic
-        //   var action = 'Exchange'; // Change this based on your logic
-        //   button.textContent = action;
-        // });
+        button.addEventListener('click', function() {
+          // Show "Exchange" or "Return" based on your logic
+          var action = 'Exchange'; // Change this based on your logic
+          button.textContent = action;
+        });
         
         // Append card to the container
         ordersContainer.appendChild(card);
@@ -128,5 +128,5 @@
       console.log("error", textStatus, errorThrown);
     }
   });
-</script>
+</script> -->
 
