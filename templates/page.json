@@ -33,6 +33,7 @@
     },
     "dcbe771d-dd1a-4cb7-a69e-5a96c885f89d": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<h1>Test<\/h1>",
         "color_scheme": "background-1",
