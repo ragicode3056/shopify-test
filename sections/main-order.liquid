@@ -63,7 +63,7 @@ input[type="text"]:focus {
 {%- endstyle -%}
 <div class="test-parent" id="my-div">
   
-<form  method="POST" id="#orderForm" action="https://www.kisshosting.be/api_test/process_order.php">
+<form  method="POST" id="#orderForm" >
   <label for="order_number">Order Number:</label>
   <input type="text" id="order_number" name="order_number" required>
 
@@ -74,13 +74,13 @@ input[type="text"]:focus {
   <input type="text" id="postal_code" name="postal_code" required>
 
 
-  <button type="submit" id="formSubmit" onclick=submitForm()>Continue</button>
+  <button type="submit" id="formSubmit" onclick=submitForm(e)>Continue</button>
 </form>
 
  
 <script>
   function submitForm() {
-    
+    e.preventDefault();
       $.ajax({
         url: 'https://www.kisshosting.be/api_test/process_order.php',
         method: 'POST',
