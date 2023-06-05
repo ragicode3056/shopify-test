@@ -74,14 +74,14 @@ input[type="text"]:focus {
   <input type="text" id="postal_code" name="postal_code" required>
 
 
-  <button type="submit" id="formSubmit" onclick=submitForm(e)>Continue</button>
+  <button type="submit" id="formSubmit" onclick=submitForm()>Continue</button>
 <!-- </form> -->
 
  
 <script>
   function submitForm() {
     console.log("submit form ")
-    e.preventDefault();
+
       $.ajax({
         url: 'https://www.kisshosting.be/api_test/process_order.php',
         method: 'POST',
