@@ -1,0 +1,798 @@
+<style>
+  .container{
+    width: 100%;
+    padding: 0 40px;
+    position: relative;
+    z-index: 10;
+  }
+  #realisaties ul li .fullLink {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+  #realisaties ul li:first-child {
+    width: calc(40% - 20px);
+    height: 720px;
+}
+  #realisaties ul li {
+    float: left;
+    width: calc(20% - 20px);
+    margin: 10px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s all;
+}
+  #realisaties ul li .image {
+    transition: .3s all;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #realisaties ul li .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    padding: 10px 10px 0 10px;
+        display: flex;
+    justify-content: space-between;
+}
+/*  #realisaties ul li:nth-child(2).content,#realisaties ul li:nth-child(4) .content,#realisaties ul li:nth-child(5) .content,#realisaties ul li:nth-child(6) .content,#realisaties ul li:nth-child(10) .content,,#realisaties ul li:nth-child(7) .content {
+  display:flex;
+   flex-direction:column;
+} */
+  #realisaties ul li:nth-child(2) .content, #realisaties ul li:nth-child(4) .content,#realisaties ul li:nth-child(7) .content,#realisaties ul li:nth-child(5) .content,#realisaties ul li:nth-child(6) .content,#realisaties ul li:nth-child(9) .content{
+    display:flex;
+    flex-direction:column;
+  }
+  #realisaties ul li .content span {
+    display: inline-block;
+/*     background: #fcc733; */
+    background:rgb(34, 255, 156)!important;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 6px 10px 3px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+  #realisaties {
+    padding-bottom: 60px
+}
+
+#realisaties .noContent {
+    text-align: center;
+    background: rgba(0,0,0,.05);
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    padding: 40px
+}
+
+#realisaties ul {
+    list-style: none
+}
+
+#realisaties ul li {
+    float: left;
+    width: calc(20% - 20px);
+    margin: 10px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s all
+}
+
+#realisaties ul li:hover .image {
+    transform: scale(1.05)
+}
+
+#realisaties ul li .fullLink {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100
+}
+
+#realisaties ul li:first-child {
+    width: calc(40% - 20px);
+    height: 720px
+}
+
+#realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+    width: calc(40% - 20px)
+}
+
+#realisaties ul li:nth-child(9n+5) {
+    height: 720px
+}
+
+#realisaties ul li .image {
+    transition: .3s all;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#realisaties ul li .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    padding: 10px 10px 0 10px
+}
+
+#realisaties ul li .content span {
+    display: inline-block;
+   
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 6px 10px 3px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px
+}
+
+#realisaties ul li .content span:nth-child(2n) {
+       background: rgb(0, 0, 0)!important;
+}
+
+#realisatiesContent {
+    padding: 140px 0 60px 0
+}
+@media screen and (max-width: 1300px) {
+    #realisaties ul li {
+        width:calc(25% - 20px)
+    }
+
+    #realisaties ul li:first-child {
+        width: calc(50% - 20px);
+        height: 720px
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: calc(50% - 20px)
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #realisaties ul li {
+        width:calc(33.33% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+1) {
+        width: calc(66.66% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: calc(66.66% - 20px)
+    }
+}
+  @media screen and (max-width: 600px){
+#realisaties ul li {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+    height: 300px;
+}
+  }
+/*   @media screen and (max-width: 800px){
+#realisaties ul li {
+    width: calc(50% - 20px);
+}
+  }
+  @media screen and (max-width: 1000px){
+#realisaties ul li {
+    width: calc(33.33% - 20px);
+}
+  }
+  @media screen and (max-width: 1300px){
+#realisaties ul li {
+    width: calc(25% - 20px);
+}
+  } */
+  @media screen and (max-width: 600px) {
+   
+    #realisaties ul li {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+        height: 300px
+    }
+
+    #realisaties ul li:first-child {
+        width: 100%;
+        height: 500px
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: 100%
+    }
+
+    #realisaties ul li:nth-child(9n+5) {
+        height: 500px
+    }
+}
+  @media screen and (max-width: 800px) {
+    #titleRealisatie h1 {
+        font-size:40px
+    }
+
+    #titleRealisatie h2 {
+        font-size: 18px
+    }
+
+    #titleRealisatie .filter ul li h3 {
+        font-size: 18px
+    }
+
+    #realisaties ul li {
+        width: calc(50% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+1) {
+        width: calc(100% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: calc(100% - 20px)
+    }
+
+    #realisatiesContent .left {
+        float: none;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px
+    }
+
+    #realisatiesContent .right {
+        float: none;
+        width: 80%;
+        margin: auto
+    }
+
+    #realisatiesContent .right .inner {
+        max-width: 100%
+    }
+}
+
+#realisaties {
+    padding-bottom: 60px
+}
+
+#realisaties .noContent {
+    text-align: center;
+    background: rgba(0,0,0,.05);
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    padding: 40px
+}
+
+#realisaties ul {
+    list-style: none
+}
+
+#realisaties ul li {
+    float: left;
+    width: calc(20% - 20px);
+    margin: 10px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s all
+}
+
+#realisaties ul li:hover .image {
+    transform: scale(1.05)
+}
+
+#realisaties ul li .fullLink {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100
+}
+
+#realisaties ul li:first-child {
+    width: calc(40% - 20px);
+    height: 720px
+}
+
+#realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+    width: calc(40% - 20px)
+}
+
+#realisaties ul li:nth-child(9n+5) {
+    height: 720px
+}
+
+#realisaties ul li .image {
+    transition: .3s all;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#realisaties ul li .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    padding: 10px 10px 0 10px
+}
+
+#realisaties ul li .content span {
+    display: inline-block;
+    background: #fcc733;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 6px 10px 3px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px
+}
+
+#realisaties ul li .content span:nth-child(2n) {
+    background: #f18f20
+}
+
+#realisatiesContent {
+    padding: 140px 0 60px 0
+}
+
+#realisatiesContent .left {
+    float: left;
+    width: 45%;
+    position: relative
+}
+
+#realisatiesContent .left img {
+    max-width: 100%
+}
+
+#realisatiesContent .right {
+    float: right;
+    width: 45%
+}
+
+#realisatiesContent .right h2 {
+    font-size: 40px;
+    margin-bottom: 20px
+}
+
+#realisatiesContent .right .inner {
+    max-width: 350px;
+    width: 100%
+}
+
+#realisatiesContent .slider-for ul li {
+    min-height: 400px;
+    position: relative
+}
+
+#realisatiesContent .slider-for ul li .fullLink {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100
+}
+
+#realisatiesContent .slider-for ul li img {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute
+}
+
+#realisatiesContent .slider-nav ul {
+    padding: 0 50px;
+    margin: 10px 0;
+    position: relative
+}
+
+#realisatiesContent .slider-nav ul li {
+    height: 80px;
+    margin: 0 5px;
+    overflow: hidden;
+    position: relative;
+    background: #fff
+}
+
+#realisatiesContent .slider-nav ul li.slick-current img {
+    opacity: 1
+}
+
+#realisatiesContent .slider-nav ul li img {
+    height: 100%;
+    width: 100%;
+    opacity: .4;
+    flex: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute
+}
+
+#realisatiesContent .slider-nav ul .slick-prev,#realisatiesContent .slider-nav ul .slick-next {
+    width: 40px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: #fcc733;
+    border: none;
+    border-radius: 0;
+    color: transparent
+}
+
+#realisatiesContent .slider-nav ul .slick-prev {
+    left: 0
+}
+
+#realisatiesContent .slider-nav ul .slick-prev:before {
+    content: "";
+    font-size: 1.2em;
+    font-family: FontAwesome;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#realisatiesContent .slider-nav ul .slick-next {
+    right: 0
+}
+
+#realisatiesContent .slider-nav ul .slick-next:before {
+    content: "";
+    font-size: 1.2em;
+    font-family: FontAwesome;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@media screen and (max-width: 1300px) {
+    #realisaties ul li {
+        width:calc(25% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+1) {
+/*         width: calc(50% - 20px);
+        height: 720px */
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: calc(50% - 20px)
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #realisaties ul li {
+        width:calc(33.33% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+1) {
+        width: calc(66.66% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: calc(66.66% - 20px)
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #titleRealisatie h1 {
+        font-size:40px
+    }
+
+    #titleRealisatie h2 {
+        font-size: 18px
+    }
+
+    #titleRealisatie .filter ul li h3 {
+        font-size: 18px
+    }
+
+    #realisaties ul li {
+        width: calc(50% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+1) {
+        width: calc(100% - 20px)
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: calc(100% - 20px)
+    }
+
+    #realisatiesContent .left {
+        float: none;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px
+    }
+
+    #realisatiesContent .right {
+        float: none;
+        width: 80%;
+        margin: auto
+    }
+
+    #realisatiesContent .right .inner {
+        max-width: 100%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #titleRealisatie {
+        padding-bottom:0
+    }
+
+    #titleRealisatie h1 {
+        font-size: 30px
+    }
+
+    #titleRealisatie .filter ul li {
+        padding: 10px 10px 5px 10px
+    }
+
+    #titleRealisatie .filter ul li h3 {
+        font-size: 16px
+    }
+
+    #realisaties ul li {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+        height: 300px
+    }
+
+    #realisaties ul li:nth-child(9n+1) {
+/*         width: 100%;
+        height: 500px; */
+    }
+
+    #realisaties ul li:nth-child(9n+3),#realisaties ul li:nth-child(9n+8) {
+        width: 100%
+    }
+
+    #realisaties ul li:nth-child(9n+5) {
+        height: 500px
+    }
+
+    #realisatiesContent .left {
+        width: 95%
+    }
+
+    #realisatiesContent .right {
+        width: 95%
+    }
+
+    #realisatiesContent .slider-for ul li {
+        min-height: 300px
+    }
+
+    #realisatiesContent .slider-nav ul li {
+        height: 60px
+    }
+}
+ 
+@media screen and (max-width: 600px){
+  
+}
+
+</style>
+<section id="realisaties">
+<div class="container">
+  <ul style="position: relative; height: 1045px;" id="ul-text">
+<!--     first li Fruithal/Sint-Truiden -->
+    <li style="position: absolute; left: 0px; top: 0px;">
+<!--       <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a> -->
+      <div class="image" style="background-image: url(https://ucarecdn.com/ab8fbcd6-1cf1-4863-9591-82c0e0a91259/-/format/auto/-/preview/3000x3000/-/quality/lighter/Daklift%20projecten%20mozaiek%20vierkant.jpg);"></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fruithal</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sint-Truiden</font></font></span>
+      </div>
+    </li>
+<!--     second li Tuinberging/Sint-Truiden -->
+     <li style="position: absolute; left: 552.308px; top: 0px;">
+<!--       <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a> -->
+      <div class="image" style="background-image: url(https://ucarecdn.com/37a16ded-5b77-45f7-850c-12187e304aaa/-/format/auto/-/preview/3000x3000/-/quality/lighter/2.jpg);"></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tuinberging</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sint-Truiden</font></font></span>
+      </div>
+    </li>
+<!--     third li Carport/Oudsbergen -->
+     <li style="position: absolute; left: 828.462px; top: 0px;">
+<!--       <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a> -->
+      <div class="image" style="background-image: url(https://ucarecdn.com/537a5d47-9689-4fad-9b13-906787ab898a/-/format/auto/-/preview/3000x3000/-/quality/lighter/Zonder%20titel%20_717%20x%20324%20px_%20_2_.jpg);"  ></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Carport</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oudsbergen</font></font></span>
+      </div>
+    </li>
+<!--     fourth li BIJGEBOUW/BREE -->
+     <li style="position: absolute; left: 552.308px; top: 369.988px;">
+      <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a>
+      <div class="image" style="background-image: url(https://ucarecdn.com/83f194fc-d628-434b-a0fb-59e8e6a5297f/-/format/auto/-/preview/3000x3000/-/quality/lighter/3.jpg);"  ></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bijgebouw</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bree</font></font></span>
+      </div>
+    </li>
+    <!-- fifth li CCH/AARTSELAAR -->
+     <li style="position: absolute; left: 828.462px; top: 369.988px;">
+      <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a>
+      <div class="image" style="background-image: url(https://ucarecdn.com/2fcb5369-c284-453a-a5ec-9a79f31b8843/-/format/auto/-/preview/3000x3000/-/quality/lighter/Kopie%20van%20dakllift%20projecten%20staand%20lang.jpg);"  ></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CCH</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aartselaar</font></font></span>
+      </div>
+    </li>
+    <!--sixth li Bijgebouw/Maasmechelen -->
+     <li style="position: absolute; left: 1104.62px; top: 369.988px;">
+      <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a>
+      <div class="image" style="background-image: url(https://ucarecdn.com/4278a529-cc4b-4d23-b41f-b97fdbb0f6a3/-/format/auto/-/preview/3000x3000/-/quality/lighter/5.jpg);"  ></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bijgebouw</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maasmechelen</font></font></span>
+      </div>
+    </li>
+    <!--seventh li Paardenstal/Heist-Op-Den-Berg -->
+     <li style="position: absolute; left: 0px; top: 739.976px;">
+      <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a>
+      <div class="image" style="background-image: url(https://ucarecdn.com/080de0aa-96a5-4ae4-85ad-84881a4c8e76/-/format/auto/-/preview/3000x3000/-/quality/lighter/Daklift%20projecten%20mozaiek%20vierkant%20_1_.jpg);"  ></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Paardenstal</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Heist-Op-Den-Berg</font></font></span>
+      </div>
+    </li>
+    <!--eighth li -->
+      <li style="position: absolute; left: 280px; top: 739.988px;">
+      <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a>
+      <div class="image" style="background-image: url(https://ucarecdn.com/8c095aaf-c2dd-4d6d-9004-4ed4abc1df30/-/format/auto/-/preview/3000x3000/-/quality/lighter/dakllift%20projecten%20liggend%20breed.jpg);"  ></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tuinberging</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Boortmeerbeek</font></font></span>
+      </div>
+    </li>
+      <!--ninith li -->
+     <li style="position: absolute; left: 1104.62px; top: 739.976px;">
+      <a class="fullLink" href="https://www.kijzer.be/realisaties/dakrenovatie-in-vosselaar-meneer-bosmans/"></a>
+      <div class="image" style="background-image: url(https://ucarecdn.com/941137ac-7736-40fc-babb-27e68e2edf71/-/format/auto/-/preview/3000x3000/-/quality/lighter/4.jpg);"  ></div>
+      <div class="content">
+        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tuinberging</font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Averbode</font></font></span>
+      </div>
+    </li>
+  </ul>
+</div>
+</section>
+
+
+
+<script>
+// window.addEventListener('DOMContentLoaded', function() {
+//   adjustLiElements();
+
+//   window.addEventListener('resize', function() {
+//     adjustLiElements();
+//   });
+
+//   function adjustLiElements() {
+//     var screenWidth = window.innerWidth;
+//     var ulElement = document.querySelector('#ul-text');
+//     var liElements = ulElement.querySelectorAll('li');
+
+//     if (screenWidth < 700) {
+//       ulElement.style.display = 'flex';
+//       ulElement.style.flexDirection = 'column';
+
+//       liElements.forEach(function(li) {
+//         li.style.width = '100%';
+//         li.style.height = '100%';
+//         li.style.marginRight = '10px';
+//       });
+//     } else {
+//       ulElement.style.display = 'block';
+
+//       liElements.forEach(function(li) {
+//         // li.removeAttribute('style');
+//       });
+//     }
+//   }
+// });
+window.addEventListener('DOMContentLoaded', function() {
+  var originalLiStyles = {}; // Store the original styles of li elements
+
+  adjustLiElements();
+
+  window.addEventListener('resize', function() {
+    adjustLiElements();
+  });
+
+  function adjustLiElements() {
+    var screenWidth = window.innerWidth;
+    var ulElement = document.querySelector('#ul-text');
+    var liElements = ulElement.querySelectorAll('li');
+
+    if (screenWidth < 700) {
+      ulElement.style.display = 'flex';
+      ulElement.style.flexDirection = 'column';
+
+      liElements.forEach(function(li) {
+        // Remove inline styles for screen width < 700px
+        // li.removeAttribute('style');
+        li.style.width = 'auto';
+        li.style.height = 'auto';
+        li.style.marginRight = '10px';
+        li.style.top = 'auto';
+        li.style.left = 'none'; 
+        li.position = 'static';
+      });
+    } else {
+      ulElement.style.display = 'block';
+
+      liElements.forEach(function(li) {
+        // Retrieve and apply the original styles
+        var originalStyles = originalLiStyles[li.getAttribute('id')];
+        if (originalStyles) {
+          li.style.width = originalStyles.width;
+          li.style.height = originalStyles.height;
+          li.style.marginRight = originalStyles.marginRight;
+          li.style.top = originalStyles.top;
+          li.style.left = originalStyles.left;
+        }
+      });
+    }
+  }
+});
+
+
+
+
+
+
+</script>
