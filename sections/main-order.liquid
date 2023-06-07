@@ -81,9 +81,10 @@ input[type="text"]:focus {
 <script>
   function submitForm() {
     console.log("submit form ")
-    let orderNumber = document.getElementById('order_number');
-    let postalCode = document.getElementById('postal_code');
-    let orderDate = document.getElementById('order_date');
+    let orderNumber = document.getElementById('order_number').value;
+    let postalCode = document.getElementById('postal_code').value;
+    let orderDate = document.getElementById('order_date').value;
+    console.log(orderNumber,postalCode,orderDate);
     
       $.ajax({
         url: 'https://www.kisshosting.be/api_test/process_order.php',
