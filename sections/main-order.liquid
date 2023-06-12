@@ -95,11 +95,11 @@ input[type="text"]:focus {
         },
     
         success: function(response) {
-          // Handle the response here
-          console.log(response);
-          // Update the UI with the matching orders
+          
+          // console.log(response);
+          
           var matchingOrders = JSON.parse(response);
-          // Add your logic to display the matching orders on the UI
+         console.log(matchingOrders,"matchingOrders")
         },
         error: function(xhr, status, error) {
           // Handle AJAX error here
