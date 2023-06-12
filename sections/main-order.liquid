@@ -96,9 +96,11 @@ input[type="text"]:focus {
     
         success: function(response) {
           
-          console.log(response.orders);
+          console.log(response);
           
           var matchingOrders = JSON.parse(response);
+            console.log("*****************************************************************");
+           console.log("order ",matchingOrders)
          
         },
         error: function(xhr, status, error) {
