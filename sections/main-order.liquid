@@ -96,10 +96,10 @@ input[type="text"]:focus {
     
         success: function(response) {
           
-          // console.log(response);
+          console.log(response);
           
           var matchingOrders = JSON.parse(response);
-         console.log(matchingOrders,"matchingOrders")
+         
         },
         error: function(xhr, status, error) {
           // Handle AJAX error here
