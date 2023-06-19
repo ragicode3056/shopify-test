@@ -120,12 +120,13 @@ if (startIndex !== -1 && endIndex !== -1) {
 
   // Loop through each item and create a card
   jsonArray.forEach(function(order) {
+    var orderDate = order.processed_at.split('T')[0];
     // Construct the card HTML
     var cardHTML = `
       <div class="card">
         <h3>${order.line_items[0].name}</h3>
         <p>Order Number : ${order.order_number}</p>
-        <p>Order Date  : ${order.processed_at}</p>
+        <p>Order Date  : ${orderDate}</p>
         <p>Total Price : ${order.total_price}</p>
         <p>Quantity : ${order.total_price}</p>
       </div>
