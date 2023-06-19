@@ -113,15 +113,13 @@ if (startIndex !== -1 && endIndex !== -1) {
 } else {
   console.error('Unable to extract JSON array from the response.');
 }
-          var matchingOrders = JSON.parse(response);
-var dataArray = matchingOrders[0];
-          
+      
           // var matchingOrders = response;
           console.log(dataArray,"dataArray")
     document.getElementById('cardContainer').innerHTML = '';
 
   // Loop through each item and create a card
-  matchingOrders.forEach(function(order) {
+  jsonArray.forEach(function(order) {
     // Construct the card HTML
     var cardHTML = `
       <div class="card">
