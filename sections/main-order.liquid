@@ -75,6 +75,7 @@ input[type="text"]:focus {
 
 
   <button type="submit" id="formSubmit" onclick=submitForm()>Continue</button>
+  <div id="cardContainer"></div>
 <!-- </form> -->
 
  
@@ -99,7 +100,21 @@ input[type="text"]:focus {
           console.log(response);
           
           var matchingOrders = response;
-  
+   document.getElementById('cardContainer').innerHTML = '';
+
+  // Loop through each item and create a card
+  matchingOrders.forEach(function(order) {
+    // Construct the card HTML
+    var cardHTML = `
+      <div class="card">
+        <h3>${order.itemName}</h3>
+        <p>Price: ${order.price}</p>
+        <p>Quantity: ${order.quantity}</p>
+      </div>
+    `;
+
+    // Append the card HTML to the container
+    document.getElementById('cardContainer').innerHTML += cardHTML;
          
         },
         error: function(xhr, status, error) {
