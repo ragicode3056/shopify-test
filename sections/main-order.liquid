@@ -104,23 +104,23 @@ input[type="text"]:focus {
           console.log(response);
           
           var matchingOrders = response;
-   document.getElementById('cardContainer').innerHTML = '';
+  //  document.getElementById('cardContainer').innerHTML = '';
 
-  // Loop through each item and create a card
-  matchingOrders.forEach(function(order) {
-    // Construct the card HTML
-    var cardHTML = `
-      <div class="card">
-        <h3>${order.line_items[0].name}</h3>
-        <p>Order Number : ${order.order_number}</p>
-        <p>Processed At : ${order.processed_at}</p>
-        <p>Total Price : ${order.total_price}</p>
-        <p>Quantity : ${order.total_price}</p>
-      </div>
-    `;
+  // // Loop through each item and create a card
+  // matchingOrders.forEach(function(order) {
+  //   // Construct the card HTML
+  //   var cardHTML = `
+  //     <div class="card">
+  //       <h3>${order.line_items[0].name}</h3>
+  //       <p>Order Number : ${order.order_number}</p>
+  //       <p>Processed At : ${order.processed_at}</p>
+  //       <p>Total Price : ${order.total_price}</p>
+  //       <p>Quantity : ${order.total_price}</p>
+  //     </div>
+  //   `;
 
-    // Append the card HTML to the container
-    document.getElementById('cardContainer').innerHTML += cardHTML;
+  //   // Append the card HTML to the container
+  //   document.getElementById('cardContainer').innerHTML += cardHTML;
          
         },
         error: function(xhr, status, error) {
