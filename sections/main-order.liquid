@@ -101,7 +101,18 @@ input[type="text"]:focus {
     
         success: function(response) {
           
-          // console.log(response);
+          // extract array from response
+var startIndex = response.indexOf('['); // Find the start of the JSON array
+var endIndex = response.lastIndexOf(']'); // Find the end of the JSON array
+
+if (startIndex !== -1 && endIndex !== -1) {
+  var jsonSubstring = response.substring(startIndex, endIndex + 1);
+  var jsonArray = JSON.parse(jsonSubstring);
+
+  console.log(jsonArray,"jsonArray"); // Display the array in the console
+} else {
+  console.error('Unable to extract JSON array from the response.');
+}
           var matchingOrders = JSON.parse(response);
 var dataArray = matchingOrders[0];
           
