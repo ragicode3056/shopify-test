@@ -129,7 +129,9 @@ if (startIndex !== -1 && endIndex !== -1) {
         <p>Order Date  : ${orderDate}</p>
         <p>Total Price : ${order.total_price}</p>
         <p>Quantity : ${order.line_items[0].quantity}</p>
-         <p>${order.shipping_address.zip}</p>
+         <p> Address :
+         ${order.shipping_address.city}
+         ${order.shipping_address.zip}</p>
       </div>
     `;
 
