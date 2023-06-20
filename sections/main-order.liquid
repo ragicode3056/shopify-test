@@ -161,7 +161,47 @@ if (startIndex !== -1 && endIndex !== -1) {
   }
    let s = document.getElementById('formSubmit');
   console.log(s,"s");
+var orderNumberElement; // Declare the variables in a higher scope
+  var orderTotalElement;
 
+  function exchangeOrder(orderNumber, orderTotal) {
+    // Open the first popup
+    var popup = document.getElementById('exchangePopupNonLogged');
+    popup.style.display = 'block';
+
+    // Set the order number and order total in the first popup
+    orderNumberElement = document.getElementById('popupOrderNumber'); // Assign the values to the variables
+    orderNumberElement.textContent = orderNumber;
+
+    orderTotalElement = document.getElementById('popupOrderTotal');
+    orderTotalElement.textContent = orderTotal;
+  }
+
+  function closePopup() {
+    // Close the first popup
+    var popup = document.getElementById('exchangePopupNonLogged');
+    popup.style.display = 'none';
+
+    // Open the second popup
+    var thanksPopup = document.getElementById('thanksPopupNonLogged');
+    thanksPopup.style.display = 'block';
+
+    // Get the entered reason
+    var reasonInput = document.getElementById('reasonInput');
+    var reason = reasonInput.value;
+
+    // Log the order number, order total, and reason
+    console.log('Order Number:', orderNumberElement.textContent);
+    console.log('Order Total:', orderTotalElement.textContent);
+    console.log('Reason:', reason);
+  }
+
+  function closeThanksPopup() {
+    // Close the second popup
+    var thanksPopup = document.getElementById('thanksPopup');
+    thanksPopup.style.display = 'none';
+  }
+    console.log({{ customer | json }},"customers")
 </script>
 <!--   $(document).ready(function() {
     $('#orderForm').submit(function(event) {
