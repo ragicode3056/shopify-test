@@ -214,7 +214,13 @@ input[type="text"]:focus {
           }
     
     document.getElementById('cardContainer').innerHTML = '';
-
+ if (matchingOrders.length === 0) {
+          // Display validation message
+          var validationMessage = document.createElement('p');
+          validationMessage.textContent = 'Details mismatched. Please enter correctly.';
+          validationMessage.classList.add('validation-message');
+          document.getElementById('cardContainer').appendChild(validationMessage);
+        } else{
   // Loop through each item and create a card
   matchingOrders.forEach(function(order) {
     var orderDate = order.processed_at.split('T')[0];
@@ -237,7 +243,7 @@ input[type="text"]:focus {
     // Append the card HTML to the container
     document.getElementById('cardContainer').innerHTML += cardHTML;
     console.log(order.shipping_address,"shipping_address*****")
-  });     
+  })};     
         },
         error: function(xhr, status, error) {
           // Handle AJAX error here
