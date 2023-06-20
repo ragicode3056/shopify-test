@@ -145,6 +145,7 @@ if (startIndex !== -1 && endIndex !== -1) {
          ${order.shipping_address.city}
          ${order.shipping_address.zip}</p>
       </div>
+        <button onclick="exchangeOrder('{{ order.name }}', '{{ order.total_net_amount }}')">Exchange</button>
     `;
 
     // Append the card HTML to the container
