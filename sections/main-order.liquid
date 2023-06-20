@@ -246,8 +246,9 @@ input[type="text"]:focus {
             ${order.shipping_address.address1}
          ${order.shipping_address.city}
          ${order.shipping_address.zip}</p>
+           <button onclick="exchangeOrder(${order.order_number}, ${order.total_price})">Exchange</button>
       </div>
-        <button onclick="exchangeOrder(${order.order_number}, ${order.total_price})">Exchange</button>
+      
     `;
 
     // Append the card HTML to the container
