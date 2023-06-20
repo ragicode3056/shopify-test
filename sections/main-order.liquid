@@ -155,8 +155,7 @@ input[type="text"]:focus {
   }
 {%- endstyle -%}
 <div class="test-parent" id="my-div">
-  
-<!-- <form  method="POST" id="#orderForm" action="https://www.kisshosting.be/api_test/process_order.php"> -->
+
   <label for="order_number">Order Number:</label>
   <input type="text" id="order_number" name="order_number" required>
 
@@ -169,7 +168,7 @@ input[type="text"]:focus {
 
   <button type="submit" id="formSubmit" onclick=submitForm()>Continue</button>
   <div id="cardContainer"></div>
-<!-- </form> -->
+
 <div id="exchangePopupNonLogged" class="popup">
   <h2>Exchange Order</h2>
   <p>Order Number: <span id="popupOrderNumber"></span></p>
@@ -185,7 +184,7 @@ input[type="text"]:focus {
  
 <script>
   function submitForm() {
-    console.log("submit form ")
+  
     let orderNumber = document.getElementById('order_number').value;
     let postalCode = document.getElementById('postal_code').value;
     let orderDate = document.getElementById('order_date').value;
@@ -202,24 +201,22 @@ input[type="text"]:focus {
         success: function(response) {
           
           // extract array from response
-var startIndex = response.indexOf('['); // Find the start of the JSON array
-var endIndex = response.lastIndexOf(']'); // Find the end of the JSON array
-
-if (startIndex !== -1 && endIndex !== -1) {
-  var jsonSubstring = response.substring(startIndex, endIndex + 1);
-  var jsonArray = JSON.parse(jsonSubstring);
-
-  console.log(jsonArray,"jsonArray"); // Display the array in the console
-} else {
-  console.error('Unable to extract JSON array from the response.');
-}
-      
-          // var matchingOrders = response;
-          // console.log(dataArray,"dataArray")
+          var startIndex = response.indexOf('['); // Find the start of the JSON array
+          var endIndex = response.lastIndexOf(']'); // Find the end of the JSON array
+          
+          if (startIndex !== -1 && endIndex !== -1) {
+            var jsonSubstring = response.substring(startIndex, endIndex + 1);
+            var matchingOrders = JSON.parse(jsonSubstring);
+          
+            console.log(matchingOrders,"matchingOrders"); // Display the array in the console
+          } else {
+            console.error('Unable to extract JSON array from the response.');
+          }
+    
     document.getElementById('cardContainer').innerHTML = '';
 
   // Loop through each item and create a card
-  jsonArray.forEach(function(order) {
+  matchingOrders.forEach(function(order) {
     var orderDate = order.processed_at.split('T')[0];
     // Construct the card HTML
     var cardHTML = `
