@@ -130,6 +130,7 @@ if (startIndex !== -1 && endIndex !== -1) {
         <p>Total Price : ${order.total_price}</p>
         <p>Quantity : ${order.line_items[0].quantity}</p>
          <p> Address :
+            ${order.shipping_address.address1}
          ${order.shipping_address.city}
          ${order.shipping_address.zip}</p>
       </div>
