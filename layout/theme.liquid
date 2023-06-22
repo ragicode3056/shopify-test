@@ -335,13 +335,13 @@ dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
   event: "add_to_cart",
   ecommerce: {
-    currency: "{{ order.currency }}",
-    value: {{ total_price | times: 0.01 }},
+    currency: "{{ currency }}",
+    value: {{ value}},
     items: [
     {
-      item_id: "{{ line_item.product_id }}",
-      item_name: "{{ line_item.title | remove: "'" | remove: '"' }}",
-      price:{{ line_item.final_price | times: 0.01 }},
+      item_id: "{{ item_id }}",
+      item_name: "{{ item_name }}",
+      price:{{price }},
       quantity: 1
     }
     ]
