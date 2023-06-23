@@ -6,7 +6,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "text": "{{ product.vendor }}{{ product.metafields.custom.test.value }}",
             "text_style": "body"
           }
         },
