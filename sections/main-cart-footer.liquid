@@ -5,6 +5,32 @@
 
 <div class="page-width{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
   <h1>cart items</h1>
+  <div class="cart-attribute-field">
+  <div class="form-field">
+  <label class="form-field-title" style="top: -20px; left: 0px;" for="vat-number">
+            
+   
+    
+      <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Do you want an invoice? </font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+    
+      Enter your VAT number here. </font><font style="vertical-align: inherit;">If you practice a liberal profession, enter 'Free Profession' here. &nbsp;</font></font><span style="font-size: 12px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Invoice address can be entered on the next screen)</font></font></span>
+    
+    
+    
+    </label>
+    <input id="vat-number" style="padding: 15px; width: 300px; background-color: white; height: 40px !important;" class="form-field-input" type="text" name="attributes[VAT number]" value="BE0756853881">  
+  </div>      
+</div
+  <div class="cart-attribute-field">
+  <div class="form-field">
+  <label class="form-field-title" style="top: -20px; left: 0px;" for="statement"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        
+      Enter your message here:</font></font><br>
+
+    </label>
+    <input id="statement" style="padding: 15px; width: 300px; background-color: white; height: 40px !important;" class="form-field-input" type="text" name="attributes[statement]" value="het is voor Karen haar verjaardag">  
+  </div>      
+</div>
   <div>
     <div class="cart__footer">
       {%- if settings.show_cart_note -%}
