@@ -350,6 +350,41 @@
           </table>
         {%- endif -%}
         <h1>test </h1>
+                          <div class="cart-attribute-field">
+  <div class="form-field">
+  <label class="form-field-title" style="top: -20px; left: 0px;" for="vat-number">
+            
+   {% if shop.locale == "nl" %}
+    
+      <b>Wens je een factuur?</b><br/>
+    
+      Vul hier je BTW nummer in. Als je een vrij beroep uitoefent, vul hier 'Vrij Beroep' in. &nbsp;<span style="font-size: 12px;">(Factuuradres kan je ingeven op het volgende scherm)</span>
+    
+    {% elsif shop.locale == "fr" %}
+    
+      Numéro de TVA:
+    
+    {% else %}
+    
+      VAT number:
+    
+    {% endif %}
+    
+    </label>
+    <input id="vat-number" style="padding: 15px; width: 300px; background-color: white; height: 40px !important;" class="form-field-input" type="text" name="attributes[VAT number]" value="{{ cart.attributes["VAT number"] }}" {% if customer.tags contains 'B2B' %}required{% endif %}>  
+  </div>      
+</div>
+        
+<div class="cart-attribute-field">
+  <div class="form-field">
+  <label class="form-field-title" style="top: -20px; left: 0px;" for="statement">
+        
+      Geef hier je mededeling in:<br/>
+
+    </label>
+    <input id="statement" style="padding: 15px; width: 300px; background-color: white; height: 40px !important;" class="form-field-input" type="text" name="attributes[statement]" value="{{ cart.attributes["statement"] }}">  
+  </div>      
+</div>
       </div>
     </div>
 
