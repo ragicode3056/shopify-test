@@ -142,7 +142,21 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "531809739209504352": {
+        "type": "shopify:\/\/apps\/sale-max-upsell-cross-sell\/blocks\/SaleMax\/3f275585-eab6-4df6-9bcd-0ec23421d744",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "3920521780354630259": {
+        "type": "shopify:\/\/apps\/sale-max-upsell-cross-sell\/blocks\/SaleMaximize\/3f275585-eab6-4df6-9bcd-0ec23421d744",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
