@@ -1,0 +1,98 @@
+
+{% assign productData = pages['product-data'].content | replace: ',"',',' %}
+<style>
+  .specs-table-child-div{
+    width:45%;
+    margin-right: auto;
+  }
+       @media screen and (max-width: 641px) {
+          .specs-table-child-div {
+            width:100%;
+            margin-right:0px;
+          }
+        }
+  .specs-header-tag{
+    text-transform: uppercase;
+    color: #00b4bc;
+    font-size: 20px;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid #00b4bc;
+  }
+  .specs-table{
+        display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+      width: 100%;
+  }
+  .specs-table table tr:nth-child(odd){
+    background:none !important;
+  }
+  .txt-algn-right{
+    text-align:right;
+  }
+  .spcifications-txt{
+        font-size: 25px;
+    font-weight: 700;
+   // margin-left: 189px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+</style>
+{% assign rows = productData | split: ';' %}
+
+<script>
+  let data = {{productData | split: ';' }};
+  console.log(data,"data")
+</script>
+<div class="spcifications-txt " id="specs"> SPECIFICATIONS </div>
+  
+<div class="specs-table " >
+
+  {% assign currentHeader = '' %}
+  {% assign inTable = false %}
+  {% assign productSKU = product.selected_or_first_available_variant.sku %}
+  {% for row in rows %}
+      {% assign fields = row | split: ',' %}
+      {% assign rowSKU = fields[0] %}
+      {% assign rowCategory = fields[1] %}
+      {% assign rowField = fields[2] %}
+      {% assign rowValue = fields[3] %}
+      {% assign rowInfo = fields[4] %}
+    
+      {% if rowSKU contains productSKU %}
+
+        {% unless currentHeader contains rowCategory %}  
+            {% if inTable %}
+              </table>
+    </div>
+            {% endif %}
+            {% assign inTable = true %}
+          <div class="specs-table-child-div">
+            <h2 class="specs-header-tag">{{ rowCategory }}</h2>
+
+            <table>
+              
+            {% assign currentHeader = rowCategory %}
+        {% endunless %}
+
+
+        {% assign valueLength = rowValue | size %}
+        {% if valueLength > 0 %}
+          <tr>
+            <td title="{{ rowInfo }}">{{ rowField }}</td>
+            <td class="txt-algn-right">{{ rowValue }}</td>
+          </tr>
+        {% endif %}
+
+  
+      {% endif %}
+  {% endfor %}
+            
+            </table>
+          </div>
+          </div>
+
+
