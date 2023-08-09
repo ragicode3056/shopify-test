@@ -122,7 +122,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
-    "cart_type": "page",
+    "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
@@ -142,21 +142,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "531809739209504352": {
-        "type": "shopify:\/\/apps\/sale-max-upsell-cross-sell\/blocks\/SaleMax\/3f275585-eab6-4df6-9bcd-0ec23421d744",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "3920521780354630259": {
-        "type": "shopify:\/\/apps\/sale-max-upsell-cross-sell\/blocks\/SaleMaximize\/3f275585-eab6-4df6-9bcd-0ec23421d744",
-        "disabled": false,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Default": {
